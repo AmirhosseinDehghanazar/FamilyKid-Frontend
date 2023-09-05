@@ -1,0 +1,12 @@
+.bg-social {
+  background-color: #cfeff8;
+}
+
+.links-container > a {
+  color: #525252;
+  transition: transform 0.15s;
+}
+
+.links-container > a:hover {
+  transform: scale(1.1);
+}

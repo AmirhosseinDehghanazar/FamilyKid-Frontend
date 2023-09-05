@@ -1,0 +1,20 @@
+.bg-line {
+  height: 39px;
+  background: url("../../assets/img/comment/Line-3.png");
+  background-position: center;
+  background-size: contain;
+  background-clip: border-box;
+  background-repeat: no-repeat;
+}
+.chelona-width {
+  max-width: 620px;
+}
+
+.comment-sp-width {
+  max-width: 60ch;
+}
+.comment-rounder {
+  border-radius: 30px;
+  border: solid 0.5px #0faddb33;
+  border-color: #0faddb33;
+}
