@@ -1,16 +1,15 @@
 import React from "react";
 import Logo from "../../assets/img/navbar/LOGO.png";
 import shape from "../../assets/img/navbar/shape.png";
-import "./navbar.css";
 
 const Navbar = () => {
   return (
     <div className="mt-8 mb-4">
       {/* navbar */}
       <div className="transition-all flex justify-around items-center ">
-        <div className="-mt-7">
+        <a href="#" className="-mt-7">
           <img src={Logo} />
-        </div>
+        </a>
         <div className="transition-all flex font-semibold lg:gap-4  xl:gap-10">
           <a href="#">
             <div className="flex items-center gap-2">
