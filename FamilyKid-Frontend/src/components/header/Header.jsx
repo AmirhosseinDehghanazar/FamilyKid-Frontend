@@ -14,13 +14,14 @@ const Header = () => {
         <div className="absolute -top-8 -right-10">
           <img src={up} />
         </div>
+
         <div>
           <img src={under} />
         </div>
         <p className="font-bold text-2xl max-w-lg my-2">
           Family Kid Academy is International Online English Teaching Services
         </p>
-        <button className="py-3 mt-4 px-4 text-lg button rounded-xl text-white font-semibold">
+        <button className="py-3 mt-4 px-4 bg-primary hover:bg-primary/80  button rounded-xl text-white font-semibold">
           Get Started
         </button>
       </div>

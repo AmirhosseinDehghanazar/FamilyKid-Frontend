@@ -33,8 +33,8 @@ const Navbar = () => {
             </div>
           </a>
         </div>
-        <div className="buttons_div rounded-2xl overflow-hidden">
-          <button className="bg-button py-3 px-6 rounded-xl hover:bg-cyan-600">
+        <div className="border border-primary rounded-2xl overflow-hidden">
+          <button className="text-white bg-primary py-3 px-6 rounded-xl hover:bg-cyan-600">
             Register
           </button>
           <button className=" py-3 px-6 rounded-2xl">Login</button>
