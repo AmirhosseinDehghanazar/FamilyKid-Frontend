@@ -13,35 +13,39 @@ const Navbar = () => {
           <img src={Logo} />
         </a>
         <div className="transition-all flex font-semibold lg:gap-4  xl:gap-10">
-          <a href="#">
+          <div>
             <div className="flex dropdown items-center gap-2 relative">
               <p>About Us </p>
               <img className="h-2" src={shape} />
               <DropdownMenu links={["link aval about", "link dovom about"]} />
             </div>
-          </a>
+          </div>
           <a href="#">Our Services</a>
-          <a href="#">
+          <div>
             <div className="flex items-center gap-2  dropdown relative">
               <p> Our Organization </p>
               <img className="h-2" src={shape} />
               <DropdownMenu links={["link aval org", "linkdovom org"]} />
             </div>
-          </a>
+          </div>
           <a href="#"> Jobs</a>
-          <a href="#">
+          <div>
             <div className="flex items-center gap-2  dropdown relative">
               <p>Contact Us </p>
               <img className="h-2" src={shape} />
               <DropdownMenu links={["link aval con", "link dovom con"]} />
             </div>
-          </a>
+          </div>
         </div>
         <div className="border border-primary rounded-2xl overflow-hidden">
-          <button className="text-white bg-primary py-3 px-6 rounded-xl hover:bg-cyan-600">
-            Register
-          </button>
-          <button className=" py-3 px-6 rounded-2xl">Login</button>
+          <a href="/register">
+            <button className="text-white bg-primary py-3 px-6 rounded-xl hover:bg-cyan-600">
+              Register
+            </button>
+          </a>
+          <a href="/login">
+            <button className=" py-3 px-6 rounded-2xl">Login</button>
+          </a>
         </div>
       </div>
     </div>
