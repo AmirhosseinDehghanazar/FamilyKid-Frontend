@@ -1,6 +1,7 @@
 import "./App.css";
 import Segments from "./components/Segments";
 import Comment from "./components/comment/Comments";
+import Footer from "./components/footer/Footer";
 import Gallery from "./components/gallery/Gallery";
 import Header from "./components/header/Header";
 import Navbar from "./components/navbar/Navbar";
@@ -16,6 +17,7 @@ function App() {
         <Policy />
         <Gallery />
         <Comment />
+        <Footer />
       </div>
     </>
   );
