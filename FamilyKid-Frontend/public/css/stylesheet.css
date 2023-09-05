@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Chela One";
+  src: url("../font/ChelaOne-Regular.eot");
+  src: url("../font/ChelaOne-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../font/ChelaOne-Regular.woff2") format("woff2"),
+    url("../font/ChelaOne-Regular.woff") format("woff"),
+    url("../font/ChelaOne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
