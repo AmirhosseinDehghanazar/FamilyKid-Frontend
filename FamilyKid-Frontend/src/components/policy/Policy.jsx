@@ -23,7 +23,7 @@ const Policy = () => {
           To provide the most accessible affordable and quality educational
           services to children and teenagers using the best teachers.
         </p>
-        <button className="bg-primary w-40 mt-4 text-white py-2 rounded-xl">
+        <button className="bg-primary w-40 mt-4 hover:bg-primary/80 text-white py-2 rounded-xl">
           View About Us
         </button>
       </div>

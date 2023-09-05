@@ -6,7 +6,7 @@ import FirstPart from "./FirstPart";
 
 const Footer = () => {
   return (
-    <div className="flex justify-around items-center mt-20 mb-4">
+    <div className="flex justify-around items-center mt-32 mb-4">
       <FirstPart />
       <SecondPart />
     </div>

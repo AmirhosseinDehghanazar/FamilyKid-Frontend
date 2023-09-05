@@ -8,7 +8,7 @@ const FirstPart = () => {
         <a href="#" className="text-lg font-semibold">
           Our Services
         </a>
-        <div className="flex flex-col gap-3 links-container">
+        <div className="flex flex-col gap-4 links-container">
           <a href="#">Professors</a>
           <a href="#">Values</a>
           <a href="#">The quality of our work</a>

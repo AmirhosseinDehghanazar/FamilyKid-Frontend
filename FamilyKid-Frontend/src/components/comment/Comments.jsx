@@ -7,7 +7,7 @@ import "./comments.css";
 
 const Comment = () => {
   return (
-    <div className="flex justify-around items-center mt-20 mb-6 relative 2xl:justify-center 2xl:gap-36">
+    <div className="flex justify-around items-center mt-28 mb-6 relative 2xl:justify-center 2xl:gap-36">
       <div className="comments-fp-width">
         <div className="text-chelona chelona-width text-8xl text-primary">
           Comments from our Customers
