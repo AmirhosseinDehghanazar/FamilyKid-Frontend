@@ -1,0 +1,21 @@
+.custom-button {
+  background-color: transparent;
+  color: #333; /* Set the default text color */
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.active-button {
+  background-color: #0faddb; /* Set the background color for the active button */
+  color: #fff; /* Set the text color for the active button */
+  border-color: #0faddb; /* Set the border color for the active button */
+}
+
+.inactive-button:hover {
+  background-color: #0faddb; /* Set the hover background color for the inactive button */
+  color: #fff; /* Set the hover text color for the inactive button */
+  border-color: #0faddb; /* Set the hover border color for the inactive button */
+}

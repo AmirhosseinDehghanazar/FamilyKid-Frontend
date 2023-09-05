@@ -1,28 +1,32 @@
 import React from "react";
+import "./RegSwitch.css"; // Import a separate CSS file for animations
 
+// The RegSwitch component allows users to switch between "Supervisor" and "Teacher" options.
+// It receives two props: `switchPerson` (a function to handle the person switch) and `person` (current selected person).
 const RegSwitch = ({ switchPerson, person }) => {
   return (
-    <div className="border mt-8 border-primary rounded-2xl overflow-hidden flex ">
+    // A container div that wraps the two buttons and provides a border and rounded corners.
+    <div className="border mt-8 border-primary rounded-2xl overflow-hidden flex">
+      {/* Button for selecting "Supervisor" */}
       <div>
         <button
           onClick={() => switchPerson("supervisor")}
-          className={
-            person === "supervisor"
-              ? "text-white bg-primary py-3 px-6 rounded-xl hover:bg-cyan-600"
-              : " py-3 px-6 rounded-2xl"
-          }
+          // Use conditional classes to style the button based on the selected person.
+          className={`${
+            person === "supervisor" ? "active-button" : "inactive-button"
+          } custom-button`}
         >
           Supervisor
         </button>
       </div>
+      {/* Button for selecting "Teacher" */}
       <div>
         <button
           onClick={() => switchPerson("teacher")}
-          className={
-            person === "supervisor"
-              ? " py-3 px-6 rounded-2xl"
-              : "text-white bg-primary py-3 px-6 rounded-xl hover:bg-cyan-600"
-          }
+          // Use conditional classes to style the button based on the selected person.
+          className={`${
+            person === "teacher" ? "active-button" : "inactive-button"
+          } custom-button`}
         >
           Teacher
         </button>

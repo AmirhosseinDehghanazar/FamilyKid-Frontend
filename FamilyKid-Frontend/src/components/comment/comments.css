@@ -11,5 +11,10 @@
 }
 
 .comment-sp-width {
-  max-width: 56ch;
+  max-width: 60ch;
+}
+.comment-rounder {
+  border-radius: 30px;
+  border: solid 0.5px #0faddb33;
+  border-color: #0faddb33;
 }

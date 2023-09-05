@@ -6,7 +6,7 @@ import DropdownMenu from "./DropdownMenu";
 
 const Navbar = () => {
   return (
-    <div className="mt-8 mb-4">
+    <div className="navBar mt-8 mb-4 ">
       {/* navbar */}
       <div className="transition-all flex justify-around items-center ">
         <a href="#" className="-mt-7">

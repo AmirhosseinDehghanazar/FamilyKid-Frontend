@@ -63,7 +63,22 @@ const RegisterPage = () => {
           </div>
         )}
 
-        {/* email */}
+        {/* Nationality Code */}
+        <div className="mb-6">
+          <label
+            htmlFor="email"
+            className="block mb-2 text-lg font-medium text-gray-900"
+          >
+            Nationality Code
+          </label>
+          <input
+            type="number"
+            id="Nationality"
+            className="bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  focus:outline-cyan-500 transition-all block w-full p-2.5 "
+            placeholder="2475512577457"
+            required
+          />
+        </div>
         <div className="mb-6">
           <label
             htmlFor="email"
@@ -79,7 +94,6 @@ const RegisterPage = () => {
             required
           />
         </div>
-
         {/* phone number */}
         <div className="grid gap-x-3 gap-y-0 mb-6 md:grid-cols-2">
           <div className="mb-6">
