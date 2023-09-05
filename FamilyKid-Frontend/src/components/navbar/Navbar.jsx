@@ -1,13 +1,13 @@
 import React from "react";
-import Logo from "../../assets/img/LOGO.png";
-import shape from "../../assets/img/shape.png";
+import Logo from "../../assets/img/navbar/LOGO.png";
+import shape from "../../assets/img/navbar/shape.png";
 import "./navbar.css";
 
 const Navbar = () => {
   return (
     <div className="mt-8 mb-4">
       {/* navbar */}
-      <div className="transition-all flex justify-between items-center ">
+      <div className="transition-all flex justify-around items-center ">
         <div className="-mt-7">
           <img src={Logo} />
         </div>
