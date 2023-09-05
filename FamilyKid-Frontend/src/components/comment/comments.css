@@ -1,0 +1,15 @@
+.bg-line {
+  height: 39px;
+  background: url("../../assets/img/comment/Line-3.png");
+  background-position: center;
+  background-size: contain;
+  background-clip: border-box;
+  background-repeat: no-repeat;
+}
+.chelona-width {
+  max-width: 620px;
+}
+
+.comment-sp-width {
+  max-width: 56ch;
+}
