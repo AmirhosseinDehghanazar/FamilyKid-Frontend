@@ -1,14 +1,16 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import Segments from "./components/Segments";
+import Header from "./components/header/Header";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div> test</div>
+      <div className=" md:mx-10 xl:mx-32">
+        <Navbar />
+        <Header />
+        <Segments />
+      </div>
     </>
   );
 }
