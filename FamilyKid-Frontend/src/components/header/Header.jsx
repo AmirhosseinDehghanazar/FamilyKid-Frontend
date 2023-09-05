@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <div className="flex justify-between 2xl:justify-around items-center mt-20 mb-8">
       <div className="relative">
-        <div className="text text-9xl text-sky-500 max-w-lg">
+        <div className="text-chelona text-9xl text-sky-500 max-w-lg">
           Family Kid Academy
         </div>
         <div className="absolute -top-8 -right-10">
