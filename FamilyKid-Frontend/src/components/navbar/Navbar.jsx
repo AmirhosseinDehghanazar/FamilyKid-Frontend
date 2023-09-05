@@ -7,11 +7,11 @@ const Navbar = () => {
   return (
     <div className="mt-8 mb-4">
       {/* navbar */}
-      <div className="transition-all flex justify-center items-center gap-6 md:gap-18 xl:gap-28 2xl:gap-52">
+      <div className="transition-all flex justify-between items-center ">
         <div className="-mt-7">
           <img src={Logo} />
         </div>
-        <div className="transition-all flex font-semibold sm:gap-4 md:gap-8 2xl:gap-10">
+        <div className="transition-all flex font-semibold lg:gap-4  xl:gap-10">
           <a href="#">
             <div className="flex items-center gap-2">
               <p>About Us </p>
