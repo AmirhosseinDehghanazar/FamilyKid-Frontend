@@ -129,7 +129,8 @@ const RegisterPage = () => {
             />
           </div>
 
-          {/* Gender */}
+          {/* Gender with "select" input selected 
+          value is false so they have to choose one */}
           <div>
             <label
               htmlFor="gender"
@@ -137,13 +138,18 @@ const RegisterPage = () => {
             >
               Gender
             </label>
-            <input
-              type="text"
+            <select
+              required
               id="gender"
               className="bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  focus:outline-cyan-500 transition-all block w-full p-2.5 "
-              placeholder="male female ?"
-              required
-            />
+            >
+              <option selected value={false}>
+                __Select_Gender__
+              </option>
+              <option value={"male"}>male</option>
+              <option value={"female"}>female</option>
+              <option value={"nonBinary"}>non-binary</option>
+            </select>
           </div>
 
           {/* Date of birth */}
