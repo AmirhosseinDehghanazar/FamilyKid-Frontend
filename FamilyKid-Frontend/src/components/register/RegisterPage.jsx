@@ -148,7 +148,7 @@ const RegisterPage = () => {
               </option>
               <option value={"male"}>male</option>
               <option value={"female"}>female</option>
-              <option value={"nonBinary"}>non-binary</option>
+              <option value={"unknown"}>prefer not to say</option>
             </select>
           </div>
 
