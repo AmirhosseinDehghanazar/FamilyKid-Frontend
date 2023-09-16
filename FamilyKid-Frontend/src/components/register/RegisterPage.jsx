@@ -4,15 +4,12 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import { registerSchema } from "../../validation/registerSchema";
 import { useNavigate } from "react-router-dom";
 import {
-  useRegisterConsultantMutation,
-  useRegisterSupervisorMutation,
-  useRegisterTeacherMutation,
-} from "../../app/apiSlice";
+  consultant_service,
+  supervisor_service,
+  teacher_service,
+} from "./http_service";
 
 const RegisterPage = () => {
-  const [registerConsultant] = useRegisterConsultantMutation();
-  const [registerSupervisor] = useRegisterSupervisorMutation();
-  const [registerTeacher] = useRegisterTeacherMutation();
   // using navigate to navigate after registeration
   const navigate = useNavigate();
   // checking who is regitering
@@ -30,16 +27,16 @@ const RegisterPage = () => {
   };
 
   // submitHandler
-  const submitHandler = (values) => {
+  const submitHandler = async (values) => {
     try {
       console.log(values);
       switch (person.job) {
         case "teacher":
-          return registerTeacher(values);
+          return await teacher_service.register(values);
         case "supervisor":
-          return registerSupervisor(values);
+          return await supervisor_service.register(values);
         case "consultant":
-          return registerConsultant(values);
+          return await consultant_service.register(values);
       }
       navigate("/");
     } catch (err) {
