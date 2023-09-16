@@ -4,7 +4,7 @@ import axios from "axios";
 for (teacher_service, supervisor and consultant) */
 class HTTP_register {
   constructor(endpoint) {
-    this.endpoint = `https://8115-109-230-65-89.ngrok-free.app/api/schema/swagger-ui/accounts/api/register-${endpoint}`;
+    this.endpoint = `https://3c55-109-230-65-89.ngrok-free.app/accounts/api/register-${endpoint}/`;
   }
 
   register(values) {
