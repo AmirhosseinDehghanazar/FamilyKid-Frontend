@@ -2,7 +2,7 @@ import React from "react";
 
 const Time = () => {
   return (
-    <div className="flex times flex-col justify-center items-center ">
+    <div className="flex times flex-col  items-center gap-2">
       <p>9:00 - 9:45</p>
       <p>10:00 - 10:45</p>
       <p>11:00 - 11:45</p>

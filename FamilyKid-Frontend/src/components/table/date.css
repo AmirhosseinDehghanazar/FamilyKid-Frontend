@@ -2,10 +2,15 @@
 .days {
   font-size: 25px;
 }
+/* class to adjust times in right direction with recs */
 .times {
+  font-size: 22px;
   width: 247px;
-  gap: 2.42rem;
 }
+.times > p {
+  padding: 15px 0;
+}
+
 /* smile svg */
 .bg-smile {
   background: url("../../assets/img/table/smile.svg");
@@ -32,6 +37,7 @@
   font-weight: bold;
 }
 
+/* class adjust days-text(Mon. Tue. ...) to get in position */
 .days-text {
   height: 85px;
   padding-top: 22px;
