@@ -19,3 +19,15 @@
   color: #fff; /* Set the hover text color for the inactive button */
   border-color: #0faddb; /* Set the hover border color for the inactive button */
 }
+
+/* inputs error, valid css */
+.error {
+  border-color: red;
+}
+.error:focus {
+  outline: 1px red solid;
+}
+
+.valid:focus {
+  outline: 1px rgb(49, 138, 211) solid;
+}
