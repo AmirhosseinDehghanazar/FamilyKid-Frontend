@@ -1,0 +1,12 @@
+import React from "react";
+import Date from "../components/table/Date";
+
+const Table = () => {
+  return (
+    <div className=" md:mx-10 xl:mx-20 mt-6">
+      <Date name={"Taha"} job={"super"} />
+    </div>
+  );
+};
+
+export default Table;
