@@ -3,8 +3,16 @@ import RegSwitch from "./RegSwitch";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { registerSchema } from "../../validation/registerSchema";
 import { useNavigate } from "react-router-dom";
+import {
+  useRegisterConsultantMutation,
+  useRegisterSupervisorMutation,
+  useRegisterTeacherMutation,
+} from "../../app/apiSlice";
 
 const RegisterPage = () => {
+  const [registerConsultant] = useRegisterConsultantMutation();
+  const [registerSupervisor] = useRegisterSupervisorMutation();
+  const [registerTeacher] = useRegisterTeacherMutation();
   // using navigate to navigate after registeration
   const navigate = useNavigate();
   // checking who is regitering
@@ -25,7 +33,14 @@ const RegisterPage = () => {
   const submitHandler = (values) => {
     try {
       console.log(values);
-
+      switch (person.job) {
+        case "teacher":
+          return registerTeacher(values);
+        case "supervisor":
+          return registerSupervisor(values);
+        case "consultant":
+          return registerConsultant(values);
+      }
       navigate("/");
     } catch (err) {
       alert(err.message);
