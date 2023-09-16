@@ -25,6 +25,7 @@ const RegisterPage = () => {
   const submitHandler = (values) => {
     try {
       console.log(values);
+
       navigate("/");
     } catch (err) {
       alert(err.message);
