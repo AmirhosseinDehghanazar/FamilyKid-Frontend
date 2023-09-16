@@ -31,6 +31,17 @@ const RegSwitch = ({ switchPerson, person }) => {
           Teacher
         </button>
       </div>
+      <div>
+        <button
+          onClick={() => switchPerson("consultant")}
+          // Use conditional classes to style the button based on the selected person.
+          className={`${
+            person === "consultant" ? "active-button" : "inactive-button"
+          } custom-button`}
+        >
+          consultant
+        </button>
+      </div>
     </div>
   );
 };
