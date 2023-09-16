@@ -33,6 +33,8 @@ const RegisterPage = () => {
 
       {/* person switch component */}
       <RegSwitch switchPerson={switchPerson} person={person.job} />
+
+      {/* using formik to validate values + handle submit */}
       <Formik
         initialValues={{
           email: "",
@@ -47,6 +49,8 @@ const RegisterPage = () => {
         onSubmit={(values) => submitHandler(values)}
         validationSchema={registerSchema}
       >
+        {/* we gets errors here so depend on if we have error show dif css
+        for inputs */}
         {({ errors }) => (
           <Form className="mt-10">
             {/* checks if supervisor then render supervisor inputs */}
