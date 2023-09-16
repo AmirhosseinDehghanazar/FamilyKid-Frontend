@@ -2,12 +2,17 @@ import React, { useState } from "react";
 import RegSwitch from "./RegSwitch";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { registerSchema } from "../../validation/registerSchema";
+import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
+  // using navigate to navigate after registeration
+  const navigate = useNavigate();
+  // checking who is regitering
   const [person, setPerson] = useState({
     job: "supervisor",
   });
 
+  // func to handle person jon
   const switchPerson = (job) => {
     setPerson((prev) => ({
       job: job,
@@ -20,6 +25,7 @@ const RegisterPage = () => {
   const submitHandler = (values) => {
     try {
       console.log(values);
+      navigate("/");
     } catch (err) {
       alert(err.message);
     }
