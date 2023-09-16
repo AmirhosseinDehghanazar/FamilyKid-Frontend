@@ -1,0 +1,52 @@
+/* controling days component */
+.days {
+  font-size: 25px;
+}
+/* class to adjust times in right direction with recs */
+.times {
+  font-size: 22px;
+  width: 247px;
+}
+.times > p {
+  padding: 15px 0;
+}
+
+/* smile svg */
+.bg-smile {
+  background: url("../../assets/img/table/smile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 46px;
+  height: 46px;
+}
+/* timetable text in table */
+.timetable-text {
+  display: inline-block;
+  padding: 20px 53px;
+  background-color: #f1f7e8;
+  border-radius: 22px;
+  font-size: 30px;
+  font-weight: bold;
+}
+/* good morning text in nav */
+.good-morning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* class adjust days-text(Mon. Tue. ...) to get in position */
+.days-text {
+  height: 85px;
+  padding-top: 22px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.rectangle-parent {
+  width: 9.5vw;
+  max-width: 190px;
+  margin: auto;
+}

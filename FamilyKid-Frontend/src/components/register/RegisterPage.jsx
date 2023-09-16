@@ -1,11 +1,23 @@
 import React, { useState } from "react";
 import RegSwitch from "./RegSwitch";
+import { ErrorMessage, Field, Form, Formik } from "formik";
+import { registerSchema } from "../../validation/registerSchema";
+import { useNavigate } from "react-router-dom";
+import {
+  consultant_service,
+  supervisor_service,
+  teacher_service,
+} from "./http_service";
 
 const RegisterPage = () => {
+  // using navigate to navigate after registeration
+  const navigate = useNavigate();
+  // checking who is regitering
   const [person, setPerson] = useState({
     job: "supervisor",
   });
 
+  // func to handle person jon
   const switchPerson = (job) => {
     setPerson((prev) => ({
       job: job,
@@ -14,8 +26,26 @@ const RegisterPage = () => {
     console.log(person);
   };
 
+  // submitHandler
+  const submitHandler = async (values) => {
+    try {
+      console.log(values);
+      switch (person.job) {
+        case "teacher":
+          return await teacher_service.register(values);
+        case "supervisor":
+          return await supervisor_service.register(values);
+        case "consultant":
+          return await consultant_service.register(values);
+      }
+      navigate("/");
+    } catch (err) {
+      alert(err.message);
+    }
+  };
+
   return (
-    <div className="h-screen flex flex-col items-center justify-center">
+    <div className="h-screen flex flex-col items-center justify-center register">
       <div className="font-bold text-2xl">
         <p>Registration in Family Kids</p>
       </div>
@@ -23,161 +53,239 @@ const RegisterPage = () => {
       {/* person switch component */}
       <RegSwitch switchPerson={switchPerson} person={person.job} />
 
-      <form className="mt-10">
-        {/* checks if supervisor then render supervisor inputs */}
-        {person.job === "supervisor" && (
-          <div className="grid  gap-x-3 gap-y-0 mb-6 md:grid-cols-2">
-            {/* First Name */}
-            <div className="mb-6">
-              <label
-                htmlFor="FirstName"
-                className="block mb-2 text-lg font-medium text-gray-900"
-              >
-                First Name
-              </label>
-              <input
-                type="text"
-                id="FirstName"
-                className="bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  focus:outline-cyan-500 active:outline-cyan-00 transition-all block w-full p-2.5 "
-                placeholder="your pretty name"
-                required
-              />
+      {/* using formik to validate values + handle submit */}
+      <Formik
+        initialValues={{
+          email: "",
+          phone: "",
+          landline_phone: "",
+          national_code: "",
+          first_name: "",
+          last_name: "",
+          password: "",
+          password1: "",
+        }}
+        onSubmit={(values) => submitHandler(values)}
+        validationSchema={registerSchema}
+      >
+        {/* we gets errors here so depend on if we have error show dif css
+        for inputs */}
+        {({ errors }) => (
+          <Form className="mt-10">
+            {/* checks if supervisor then render supervisor inputs */}
+
+            <div className="grid  gap-x-3 gap-y-0 mb-6 md:grid-cols-2">
+              {/* First Name */}
+              <div className="mb-6">
+                <label
+                  htmlFor="first_name"
+                  className="block mb-2 text-lg font-medium text-gray-900"
+                >
+                  First Name
+                </label>
+                <Field
+                  id="first_name"
+                  type="text"
+                  name="first_name"
+                  className={`${
+                    errors.first_name ? "error" : "valid"
+                  } bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  active:outline-cyan-00 transition-all block w-full p-2.5 `}
+                  placeholder="your pretty name"
+                />
+                <ErrorMessage
+                  name="first_name"
+                  render={(msg) => (
+                    <div className="text-red-500 font-semibold">{msg}</div>
+                  )}
+                />
+              </div>
+
+              {/* Last Name */}
+              <div className="mb-6">
+                <label
+                  htmlFor="last_name"
+                  className="block mb-2 text-lg font-medium text-gray-900"
+                >
+                  Last Name
+                </label>
+                <Field
+                  id="last_name"
+                  type="text"
+                  name="last_name"
+                  className={`${
+                    errors.last_name ? "error" : "valid"
+                  } bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  active:outline-cyan-00 transition-all block w-full p-2.5 `}
+                  placeholder="you'r beatifull last name"
+                />
+                <ErrorMessage
+                  name="last_name"
+                  render={(msg) => (
+                    <div className="text-red-500 font-semibold">{msg}</div>
+                  )}
+                />
+              </div>
             </div>
 
-            {/* Last Name */}
+            {/* Nationality Code */}
             <div className="mb-6">
               <label
-                htmlFor="lastName"
+                htmlFor="national_code"
                 className="block mb-2 text-lg font-medium text-gray-900"
               >
-                Last Name
+                Nationality Code
               </label>
-              <input
-                type="text"
-                id="lastName"
-                className="bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  focus:outline-cyan-500 transition-all block w-full p-2.5 "
-                placeholder="you'r beatifull last name"
-                required
+              <Field
+                type="string"
+                name="national_code"
+                id="national_code"
+                className={`${
+                  errors.national_code ? "error" : "valid"
+                } bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  active:outline-cyan-00 transition-all block w-full p-2.5 `}
+                placeholder="2475512577457"
+              />
+              <ErrorMessage
+                name="national_code"
+                render={(msg) => (
+                  <div className="text-red-500 font-semibold">{msg}</div>
+                )}
               />
             </div>
-          </div>
+            {/* email */}
+            <div className="mb-6">
+              <label
+                htmlFor="email"
+                className="block mb-2 text-lg font-medium text-gray-900"
+              >
+                Email address
+              </label>
+              <Field
+                id="email"
+                type="email"
+                name="email"
+                className={`${
+                  errors.email ? "error" : "valid"
+                } bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  active:outline-cyan-00 transition-all block w-full p-2.5 `}
+                placeholder="example@gmail.com"
+              />
+              <ErrorMessage
+                name="email"
+                render={(msg) => (
+                  <div className="text-red-500 font-semibold">{msg}</div>
+                )}
+              />
+              {/* email end here */}
+            </div>
+            {/* phone number */}
+            <div className="grid gap-x-3 gap-y-0 md:grid-cols-2">
+              <div className="mb-6">
+                <label
+                  htmlFor="phone"
+                  className="block mb-2 text-lg font-medium text-gray-900"
+                >
+                  Phone Number
+                </label>
+                <Field
+                  name="phone"
+                  type="number"
+                  id="phone"
+                  className={`${
+                    errors.phone ? "error" : "valid"
+                  } bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  active:outline-cyan-00 transition-all block w-full p-2.5 `}
+                  placeholder="phone number"
+                />
+                <ErrorMessage
+                  name="phone"
+                  render={(msg) => (
+                    <div className="text-red-500 font-semibold">{msg}</div>
+                  )}
+                />
+              </div>
+
+              {/* Landline Phone */}
+              <div className="mb-6">
+                <label
+                  htmlFor="landline_phone"
+                  className="block mb-2 text-lg font-medium text-gray-900"
+                >
+                  Landline Phone
+                </label>
+                <Field
+                  name="landline_phone"
+                  type="number"
+                  id="landline_phone"
+                  className={`${
+                    errors.landline_phone ? "error" : "valid"
+                  } bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  active:outline-cyan-00 transition-all block w-full p-2.5 `}
+                  placeholder="landline"
+                />
+                <ErrorMessage
+                  name="landline_phone"
+                  render={(msg) => (
+                    <div className="text-red-500 font-semibold">{msg}</div>
+                  )}
+                />
+              </div>
+              {/* password */}
+              <div className="mb-6">
+                <label
+                  htmlFor="password"
+                  className="block mb-2 text-lg font-medium text-gray-900"
+                >
+                  Password
+                </label>
+                <Field
+                  name="password"
+                  type="password"
+                  id="password"
+                  className={`${
+                    errors.password ? "error" : "valid"
+                  } bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  active:outline-cyan-00 transition-all block w-full p-2.5 `}
+                  placeholder="password"
+                />
+                <ErrorMessage
+                  name="password"
+                  render={(msg) => (
+                    <div className="text-red-500 font-semibold">{msg}</div>
+                  )}
+                />
+              </div>
+
+              {/* confirm password */}
+              <div className="mb-6">
+                <label
+                  htmlFor="password1"
+                  className="block mb-2 text-lg font-medium text-gray-900"
+                >
+                  Confirm Password
+                </label>
+                <Field
+                  id="password1"
+                  type="password"
+                  name="password1"
+                  className={`${
+                    errors.password ? "error" : "valid"
+                  } bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  active:outline-cyan-00 transition-all block w-full p-2.5 `}
+                  placeholder="confirm password"
+                />
+                <ErrorMessage
+                  name="password1"
+                  render={(msg) => (
+                    <div className="text-red-500 font-semibold">{msg}</div>
+                  )}
+                />
+              </div>
+            </div>
+
+            {/* submit button */}
+            <button
+              type="submit"
+              className="w-full bg-primary py-2 rounded-lg text-white"
+            >
+              Register
+            </button>
+          </Form>
         )}
-
-        {/* Nationality Code */}
-        <div className="mb-6">
-          <label
-            htmlFor="email"
-            className="block mb-2 text-lg font-medium text-gray-900"
-          >
-            Nationality Code
-          </label>
-          <input
-            type="number"
-            id="Nationality"
-            className="bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  focus:outline-cyan-500 transition-all block w-full p-2.5 "
-            placeholder="2475512577457"
-            required
-          />
-        </div>
-        <div className="mb-6">
-          <label
-            htmlFor="email"
-            className="block mb-2 text-lg font-medium text-gray-900"
-          >
-            Email address
-          </label>
-          <input
-            type="email"
-            id="email"
-            className="bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  focus:outline-cyan-500 transition-all block w-full p-2.5 "
-            placeholder="example@gmail.com"
-            required
-          />
-        </div>
-        {/* phone number */}
-        <div className="grid gap-x-3 gap-y-0 mb-6 md:grid-cols-2">
-          <div className="mb-6">
-            <label
-              htmlFor="phone"
-              className="block mb-2 text-lg font-medium text-gray-900"
-            >
-              Phone Number
-            </label>
-            <input
-              type="number"
-              id="phone"
-              className="bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  focus:outline-cyan-500 transition-all block w-full p-2.5 "
-              placeholder="phone number"
-              required
-            />
-          </div>
-
-          {/* Landline Phone */}
-          <div className="mb-6">
-            <label
-              htmlFor="Landline"
-              className="block mb-2 text-lg font-medium text-gray-900"
-            >
-              Landline Phone
-            </label>
-            <input
-              type="number"
-              id="Landline"
-              className="bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  focus:outline-cyan-500 transition-all block w-full p-2.5 "
-              placeholder="landline"
-              required
-            />
-          </div>
-
-          {/* Gender with "select" input selected 
-          value is false so they have to choose one */}
-          <div>
-            <label
-              htmlFor="gender"
-              className="block mb-2 text-lg font-medium text-gray-900"
-            >
-              Gender
-            </label>
-            <select
-              required
-              id="gender"
-              className="bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  focus:outline-cyan-500 transition-all block w-full p-2.5 "
-            >
-              <option selected value={false}>
-                __Select_Gender__
-              </option>
-              <option value={"male"}>male</option>
-              <option value={"female"}>female</option>
-              <option value={"unknown"}>prefer not to say</option>
-            </select>
-          </div>
-
-          {/* Date of birth */}
-          <div>
-            <label
-              htmlFor="birthDate"
-              className="block mb-2 text-lg font-medium text-gray-900"
-            >
-              Date of Birth
-            </label>
-            <input
-              type="datetime-local"
-              id="birthDate"
-              className="bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  focus:outline-cyan-500 transition-all block w-full p-2.5 "
-              placeholder="example@gmail.com"
-              required
-            />
-          </div>
-        </div>
-
-        {/* submit button */}
-        <button
-          type="submit"
-          className="w-full bg-primary py-2 rounded-lg text-white"
-        >
-          Register
-        </button>
-      </form>
+      </Formik>
     </div>
   );
 };
