@@ -16,8 +16,17 @@ const RegisterPage = () => {
     console.log(person);
   };
 
+  // submitHandler
+  const submitHandler = (values) => {
+    try {
+      console.log(values);
+    } catch (err) {
+      alert(err.message);
+    }
+  };
+
   return (
-    <div className="h-screen flex flex-col items-center justify-center">
+    <div className="h-screen flex flex-col items-center justify-center register">
       <div className="font-bold text-2xl">
         <p>Registration in Family Kids</p>
       </div>
@@ -33,66 +42,66 @@ const RegisterPage = () => {
           first_name: "",
           last_name: "",
           password: "",
+          password1: "",
         }}
-        onSubmit={(values) => console.log(values)}
+        onSubmit={(values) => submitHandler(values)}
         validationSchema={registerSchema}
       >
         {({ errors }) => (
           <Form className="mt-10">
             {/* checks if supervisor then render supervisor inputs */}
-            {person.job === "supervisor" && (
-              <div className="grid  gap-x-3 gap-y-0 mb-6 md:grid-cols-2">
-                {/* First Name */}
-                <div className="mb-6">
-                  <label
-                    htmlFor="first_name"
-                    className="block mb-2 text-lg font-medium text-gray-900"
-                  >
-                    First Name
-                  </label>
-                  <Field
-                    id="first_name"
-                    type="text"
-                    name="first_name"
-                    className={`${
-                      errors.first_name ? "error" : "valid"
-                    } bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  active:outline-cyan-00 transition-all block w-full p-2.5 `}
-                    placeholder="your pretty name"
-                  />
-                  <ErrorMessage
-                    name="first_name"
-                    render={(msg) => (
-                      <div className="text-red-500 font-semibold">{msg}</div>
-                    )}
-                  />
-                </div>
 
-                {/* Last Name */}
-                <div className="mb-6">
-                  <label
-                    htmlFor="last_name"
-                    className="block mb-2 text-lg font-medium text-gray-900"
-                  >
-                    Last Name
-                  </label>
-                  <Field
-                    id="last_name"
-                    type="text"
-                    name="last_name"
-                    className={`${
-                      errors.last_name ? "error" : "valid"
-                    } bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  active:outline-cyan-00 transition-all block w-full p-2.5 `}
-                    placeholder="you'r beatifull last name"
-                  />
-                  <ErrorMessage
-                    name="last_name"
-                    render={(msg) => (
-                      <div className="text-red-500 font-semibold">{msg}</div>
-                    )}
-                  />
-                </div>
+            <div className="grid  gap-x-3 gap-y-0 mb-6 md:grid-cols-2">
+              {/* First Name */}
+              <div className="mb-6">
+                <label
+                  htmlFor="first_name"
+                  className="block mb-2 text-lg font-medium text-gray-900"
+                >
+                  First Name
+                </label>
+                <Field
+                  id="first_name"
+                  type="text"
+                  name="first_name"
+                  className={`${
+                    errors.first_name ? "error" : "valid"
+                  } bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  active:outline-cyan-00 transition-all block w-full p-2.5 `}
+                  placeholder="your pretty name"
+                />
+                <ErrorMessage
+                  name="first_name"
+                  render={(msg) => (
+                    <div className="text-red-500 font-semibold">{msg}</div>
+                  )}
+                />
               </div>
-            )}
+
+              {/* Last Name */}
+              <div className="mb-6">
+                <label
+                  htmlFor="last_name"
+                  className="block mb-2 text-lg font-medium text-gray-900"
+                >
+                  Last Name
+                </label>
+                <Field
+                  id="last_name"
+                  type="text"
+                  name="last_name"
+                  className={`${
+                    errors.last_name ? "error" : "valid"
+                  } bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  active:outline-cyan-00 transition-all block w-full p-2.5 `}
+                  placeholder="you'r beatifull last name"
+                />
+                <ErrorMessage
+                  name="last_name"
+                  render={(msg) => (
+                    <div className="text-red-500 font-semibold">{msg}</div>
+                  )}
+                />
+              </div>
+            </div>
 
             {/* Nationality Code */}
             <div className="mb-6">
@@ -144,7 +153,7 @@ const RegisterPage = () => {
               {/* email end here */}
             </div>
             {/* phone number */}
-            <div className="grid gap-x-3 gap-y-0 mb-6 md:grid-cols-2">
+            <div className="grid gap-x-3 gap-y-0 md:grid-cols-2">
               <div className="mb-6">
                 <label
                   htmlFor="phone"
@@ -193,43 +202,53 @@ const RegisterPage = () => {
                   )}
                 />
               </div>
-
-              {/* Gender with "select" input selected 
-          value is false so they have to choose one */}
-              <div>
+              {/* password */}
+              <div className="mb-6">
                 <label
-                  htmlFor="gender"
+                  htmlFor="password"
                   className="block mb-2 text-lg font-medium text-gray-900"
                 >
-                  Gender
+                  Password
                 </label>
-                <select
-                  required
-                  id="gender"
-                  className="bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  focus:outline-cyan-500 transition-all block w-full p-2.5 "
-                >
-                  <option selected value={false} r>
-                    __Select_Gender__
-                  </option>
-                  <option value={"male"}>male</option>
-                  <option value={"female"}>female</option>
-                  <option value={"unknown"}>prefer not to say</option>
-                </select>
+                <Field
+                  name="password"
+                  type="password"
+                  id="password"
+                  className={`${
+                    errors.password ? "error" : "valid"
+                  } bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  active:outline-cyan-00 transition-all block w-full p-2.5 `}
+                  placeholder="password"
+                />
+                <ErrorMessage
+                  name="password"
+                  render={(msg) => (
+                    <div className="text-red-500 font-semibold">{msg}</div>
+                  )}
+                />
               </div>
 
-              {/* Date of birth */}
-              <div>
+              {/* confirm password */}
+              <div className="mb-6">
                 <label
-                  htmlFor="birthDate"
+                  htmlFor="password1"
                   className="block mb-2 text-lg font-medium text-gray-900"
                 >
-                  Date of Birth
+                  Confirm Password
                 </label>
-                <input
-                  type="datetime-local"
-                  id="birthDate"
-                  className="bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  focus:outline-cyan-500 transition-all block w-full p-2.5 "
-                  placeholder="example@gmail.com"
+                <Field
+                  id="password1"
+                  type="password"
+                  name="password1"
+                  className={`${
+                    errors.password ? "error" : "valid"
+                  } bg-gray-50 border py-3 border-gray-300 text-gray-900  rounded-lg  active:outline-cyan-00 transition-all block w-full p-2.5 `}
+                  placeholder="confirm password"
+                />
+                <ErrorMessage
+                  name="password1"
+                  render={(msg) => (
+                    <div className="text-red-500 font-semibold">{msg}</div>
+                  )}
                 />
               </div>
             </div>
