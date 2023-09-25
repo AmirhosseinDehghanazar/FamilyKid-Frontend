@@ -4,13 +4,17 @@
       "id": 1,
       "day": "9/21/2023",
       "time": "9:00_9:45",
-      "teachers": []
+      "teachers": [
+        "mr.x"
+      ]
     },
     {
       "id": 2,
       "day": "9/22/2023",
       "time": "9:00_9:45",
-      "teachers": []
+      "teachers": [
+        "mr.x"
+      ]
     },
     {
       "id": 3,

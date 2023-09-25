@@ -1,32 +1,37 @@
-import React from "react";
-import {
-  useGetDataByIdQuery,
-  useUpdateDataMutation,
-} from "../../../app/apiSlice";
+import { useState } from "react";
+import { useUpdateDataMutation } from "../../../app/apiSlice";
 import { toast } from "react-toastify";
 
-const Rectangle = ({ data, job, name, refetch }) => {
+const Rectangle = ({ data, job, name, refetch, setLoading }) => {
   const [updateData, {}] = useUpdateDataMutation(undefined);
   console.log(data);
 
   // handle function for teachers
   const teacherHandler = () => {
-    // cant have more than 3 teacher in a rectengle
-    if (data.teachers.length < 3 && !data.teachers.find((t) => (t = name)))
-      try {
+    try {
+      setLoading(true);
+      // cant have more than 3 teacher in a rectengle
+      if (data.teachers.length < 3 && !data.teachers.find((t) => (t = name))) {
         updateData({
           ...data,
           teachers: [...data.teachers, name],
         });
-        refetch();
         toast.success("successfully assigned");
-      } catch (e) {
-        alert(e.message);
+      } //if name already exist return below
+      else if (data.teachers.find((t) => t == name)) {
+        toast.warn("you are already asigned!");
+      } //if teachers are full
+      else if (data.teachers.length >= 3) {
+        toast.warn("sorry, can't have more than 3 teachers😣");
       }
-    else if (data.teachers.find((t) => t == name)) {
-      toast.warn("you are already asigned!");
-    } else if (data.teachers.length >= 3) {
-      toast.warn("sorry, can't have more than 3 teachers😣");
+      //refetch at the end
+      refetch();
+    } catch (e) {
+      alert(e.message);
+    } finally {
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000);
     }
   };
 
@@ -42,13 +47,15 @@ const Rectangle = ({ data, job, name, refetch }) => {
     backgroundColor: data.teachers.length >= 3 ? "#DB2725" : "#26A026",
   };
   return (
-    <div
-      onClick={job === "teacher" && teacherHandler}
-      className="flex flex-col max rectangle-parent rounded-2xl cursor-pointer overflow-hidden"
-    >
-      <div style={rectangle}></div>
-      <div style={underline}></div>
-    </div>
+    <>
+      <div
+        onClick={job === "teacher" && teacherHandler}
+        className="flex flex-col max rectangle-parent rounded-2xl cursor-pointer overflow-hidden"
+      >
+        <div style={rectangle}></div>
+        <div style={underline}></div>
+      </div>
+    </>
   );
 };
 

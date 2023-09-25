@@ -3,7 +3,7 @@ import Date from "../components/table/Date";
 
 const Table = () => {
   return (
-    <div className=" md:mx-10 xl:mx-20 2xl:mx-32 mt-6">
+    <div className=" md:px-10 xl:px-20 2xl:px-32 pt-6">
       <Date name={"Taha"} job={"teacher"} />
     </div>
   );

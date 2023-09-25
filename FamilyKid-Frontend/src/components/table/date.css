@@ -50,3 +50,7 @@
   max-width: 190px;
   margin: auto;
 }
+
+.bg-loading {
+  background-color: rgb(0, 0, 0, 0.6);
+}
