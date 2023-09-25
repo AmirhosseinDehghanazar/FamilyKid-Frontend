@@ -16,7 +16,7 @@ const Date = ({ name, job }) => {
   return (
     <>
       {loading && (
-        <div className="absolute top-0 left-0 bottom-0 h-[1191px] w-[100vw] bg-loading">
+        <div className="fixed top-0 left-0 bottom-0 h-[100vh] w-[100vw] bg-loading">
           <Loading />
         </div>
       )}
