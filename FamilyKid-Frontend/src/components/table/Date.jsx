@@ -37,7 +37,7 @@ const Date = ({ name, job }) => {
           <Days />
           {data?.map((data) => (
             <Rectangle
-              {...data}
+              data={data}
               key={data.id}
               job={job}
               refetch={refetch}

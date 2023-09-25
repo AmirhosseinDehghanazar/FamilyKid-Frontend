@@ -5,29 +5,27 @@ import {
 } from "../../../app/apiSlice";
 import { toast } from "react-toastify";
 
-const Rectangle = (props) => {
+const Rectangle = ({ data, job, name, refetch }) => {
   const [updateData, {}] = useUpdateDataMutation(undefined);
+  console.log(data);
 
   // handle function for teachers
   const teacherHandler = () => {
     // cant have more than 3 teacher in a rectengle
-    if (
-      props.teachers.length < 3 &&
-      !props.teachers.find((t) => (t = props.name))
-    )
+    if (data.teachers.length < 3 && !data.teachers.find((t) => (t = name)))
       try {
         updateData({
-          id: props.id,
-          teachers: [...props.teachers, props.name],
+          ...data,
+          teachers: [...data.teachers, name],
         });
-        props.refetch();
+        refetch();
         toast.success("successfully assigned");
       } catch (e) {
         alert(e.message);
       }
-    else if (props.teachers.find((t) => (t = props.name))) {
+    else if (data.teachers.find((t) => t == name)) {
       toast.warn("you are already asigned!");
-    } else if (props.teachers.length >= 3) {
+    } else if (data.teachers.length >= 3) {
       toast.warn("sorry, can't have more than 3 teachers😣");
     }
   };
@@ -35,17 +33,17 @@ const Rectangle = (props) => {
   const rectangle = {
     /* Rectangle */
     height: "50px",
-    backgroundColor: props.teachers.length >= 3 ? "#f4e5e9" : "#D7EDDE",
+    backgroundColor: data.teachers.length >= 3 ? "#f4e5e9" : "#D7EDDE",
   };
 
   const underline = {
     // underLine
     height: "4px",
-    backgroundColor: props.teachers.length >= 3 ? "#DB2725" : "#26A026",
+    backgroundColor: data.teachers.length >= 3 ? "#DB2725" : "#26A026",
   };
   return (
     <div
-      onClick={props.job === "teacher" && teacherHandler}
+      onClick={job === "teacher" && teacherHandler}
       className="flex flex-col max rectangle-parent rounded-2xl cursor-pointer overflow-hidden"
     >
       <div style={rectangle}></div>
