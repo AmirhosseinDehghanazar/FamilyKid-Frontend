@@ -1,12 +1,12 @@
-import { accountSlice } from "./src/app/apiSlice";
+import { apiSlice } from "./src/app/apiSlice";
 import { configureStore } from "@reduxjs/toolkit";
 
 const store = configureStore({
   reducer: {
-    [accountSlice.reducerPath]: accountSlice.reducer,
+    [apiSlice.reducerPath]: apiSlice.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(accountSlice.middleware),
+    getDefaultMiddleware().concat(apiSlice.middleware),
 });
 
 export default store;

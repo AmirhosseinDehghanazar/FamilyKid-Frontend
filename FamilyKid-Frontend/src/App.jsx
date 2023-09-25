@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Outlet } from "react-router-dom";
 import LoadingSpinner from "./components/LoadingScreen/LoadingScreen"; // Import the LoadingSpinner component
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -20,6 +21,7 @@ function App() {
       ) : (
         <Outlet /> // Render the main app content when loading is complete
       )}
+      <ToastContainer />
     </>
   );
 }

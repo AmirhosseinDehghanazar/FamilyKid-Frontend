@@ -1,11 +1,32 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-export const accountSlice = createApi({
+export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://3c55-109-230-65-89.ngrok-free.app/accounts/api/",
+    baseUrl: "http://localhost:3000/2023/september/week1",
   }),
-  endpoints: (builder) => ({}),
+  tagTypes: ["WEEK1"],
+  endpoints: (builder) => ({
+    getData: builder.query({
+      query: () => "/",
+      providesTags: (result, arg, error) => [
+        "WEEK1",
+        ...result.map(({ id }) => ({ type: "WEEK1", id })),
+      ],
+    }),
+    getDataById: builder.query({
+      query: (id) => `/${id}`,
+    }),
+    updateData: builder.mutation({
+      query: (body) => ({
+        url: `/${body.id}`,
+        method: "PUT",
+        body,
+      }),
+      invalidatesTags: (result, arg, error) => [{ type: "WEEK1", id: arg.id }],
+    }),
+  }),
 });
 
-export const {} = accountSlice;
+export const { useGetDataQuery, useUpdateDataMutation, useGetDataByIdQuery } =
+  apiSlice;

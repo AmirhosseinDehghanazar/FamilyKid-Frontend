@@ -6,8 +6,11 @@ import Days from "./components/Days";
 import Time from "./components/Time";
 import "./date.css";
 import Rectangle from "./components/Rectangle";
+import { useGetDataQuery } from "../../app/apiSlice";
 
 const Date = ({ name, job }) => {
+  const { data, refetch } = useGetDataQuery(undefined);
+
   return (
     <div className="mb-10">
       {/* header */}
@@ -30,10 +33,16 @@ const Date = ({ name, job }) => {
           <Time />
         </div>
         {/* table */}
-        <div className="grid grid-cols-7 w-full gap-2 text-center">
+        <div className="grid grid-cols-7 auto-rows-max w-full gap-2 text-center">
           <Days />
-          {Array.from(Array(91).keys()).map((num) => (
-            <Rectangle />
+          {data?.map((data) => (
+            <Rectangle
+              {...data}
+              key={data.id}
+              job={job}
+              refetch={refetch}
+              name="mr.x"
+            />
           ))}
         </div>
         {/* table ends here */}

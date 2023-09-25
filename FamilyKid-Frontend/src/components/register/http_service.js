@@ -1,7 +1,7 @@
 import axios from "axios";
 
-/* using factory Design Pattern to make 3 register POST method
-for (teacher_service, supervisor and consultant) */
+/* using factory to make 3 register POST method
+for (teacher, supervisor and consultant) */
 class HTTP_register {
   constructor(endpoint) {
     this.endpoint = `https://3c55-109-230-65-89.ngrok-free.app/accounts/api/register-${endpoint}/`;
