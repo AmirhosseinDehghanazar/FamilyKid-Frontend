@@ -9,10 +9,10 @@ export const apiSlice = createApi({
   endpoints: (builder) => ({
     getData: builder.query({
       query: () => "/",
-      providesTags: (result, arg, error) => [
-        "WEEK1",
-        ...result.map(({ id }) => ({ type: "WEEK1", id })),
-      ],
+      providesTags: (result, error, arg) =>
+        result
+          ? [...result.map(({ id }) => ({ type: "WEEK1", id })), "WEEK1"]
+          : ["WEEK1"],
     }),
     getDataById: builder.query({
       query: (id) => `/${id}`,
@@ -23,7 +23,7 @@ export const apiSlice = createApi({
         method: "PUT",
         body,
       }),
-      invalidatesTags: (result, arg, error) => [{ type: "WEEK1", id: arg.id }],
+      invalidatesTags: (result, error, arg) => [{ type: "WEEK1", id: arg.id }],
     }),
   }),
 });

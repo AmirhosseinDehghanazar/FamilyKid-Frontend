@@ -54,3 +54,11 @@
 .bg-loading {
   background-color: rgb(0, 0, 0, 0.6);
 }
+
+.teachers {
+  display: none;
+}
+.rectangle:hover .teachers {
+  display: flex;
+  flex-direction: column;
+}

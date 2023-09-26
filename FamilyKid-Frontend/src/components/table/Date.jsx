@@ -11,12 +11,12 @@ import Loading from "./../LoadingScreen/LoadingScreen";
 
 const Date = ({ name, job }) => {
   const [loading, setLoading] = useState(false);
-  const { data, refetch } = useGetDataQuery(undefined);
+  const { data } = useGetDataQuery(undefined);
 
   return (
     <>
       {loading && (
-        <div className="fixed top-0 left-0 bottom-0 h-[100vh] w-[100vw] bg-loading">
+        <div className="fixed z-50 top-0 left-0 bottom-0 h-[100vh] w-[100vw] bg-loading">
           <Loading />
         </div>
       )}
@@ -44,14 +44,13 @@ const Date = ({ name, job }) => {
             <Time />
           </div>
           {/* table */}
-          <div className="grid grid-cols-7 auto-rows-max w-full gap-2 text-center">
+          <div className="grid grid-cols-7 z-10 auto-rows-max w-full gap-2 text-center">
             <Days />
             {data?.map((data) => (
               <Rectangle
                 data={data}
                 key={data.id}
                 job={job}
-                refetch={refetch}
                 name="mr.x"
                 setLoading={setLoading}
               />
