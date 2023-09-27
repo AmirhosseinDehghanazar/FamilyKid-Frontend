@@ -6,6 +6,14 @@
       "time": "9:00_9:45",
       "teachers": [
         "mr.x"
+      ],
+      "students": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
       ]
     },
     {
@@ -13,40 +21,73 @@
       "day": "9/22/2023",
       "time": "9:00_9:45",
       "teachers": [
-        "mr.x"
+        "mr.x",
+        "mr.z"
+      ],
+      "students": [
+        "s5"
       ]
     },
     {
       "id": 3,
       "day": "9/23/2023",
       "time": "9:00_9:45",
-      "teachers": [
-        "mr.x"
-      ]
+      "teachers": [],
+      "students": []
     },
     {
       "id": 4,
       "day": "9/24/2023",
       "time": "9:00_9:45",
-      "teachers": []
+      "teachers": [
+        "mr.x"
+      ],
+      "students": [
+        "s2",
+        "s4"
+      ]
     },
     {
       "id": 5,
       "day": "9/25/2023",
       "time": "9:00_9:45",
-      "teachers": []
+      "teachers": [],
+      "students": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 6,
       "day": "9/26/2023",
       "time": "9:00_9:45",
-      "teachers": []
+      "teachers": [],
+      "students": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 7,
       "day": "9/27/2023",
       "time": "9:00_9:45",
-      "teachers": []
+      "teachers": [],
+      "students": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     }
   ]
 }
