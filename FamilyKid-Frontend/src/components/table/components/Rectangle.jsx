@@ -1,12 +1,21 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useUpdateDataMutation } from "../../../app/apiSlice";
 import { toast } from "react-toastify";
-import Loading from "../../LoadingScreen/LoadingScreen";
 
 const Rectangle = ({ data, job, name, setLoading }) => {
   const [showDetail, setShowDetail] = useState(false);
   const [students, setStudents] = useState(data.students ?? []);
-  const input = useRef(null);
+  const [add, setAdd] = useState({
+    students: {
+      show: false,
+      name: "",
+    },
+    teachers: {
+      show: false,
+      name: "",
+    },
+  });
+
   const [updateData, {}] = useUpdateDataMutation(undefined);
   console.log(data);
 
@@ -63,10 +72,19 @@ const Rectangle = ({ data, job, name, setLoading }) => {
 
   useEffect(() => {
     job === "supervisor" && setShowDetail(true);
-    console.log(input.current);
 
     return () => setShowDetail(false);
   }, []);
+
+  // handles add teacher or student
+  const addHandler = (event, name, job) => {
+    event.preventDefault();
+    updateData({ ...data, [job]: [...data[job], name] });
+    setAdd((prev) => ({ ...prev, [job]: { ...prev[job], show: false } }));
+    if (job === "students") {
+      setStudents((prev) => [...prev, name]);
+    }
+  };
 
   const rectangle = {
     /* Rectangle */
@@ -99,7 +117,6 @@ const Rectangle = ({ data, job, name, setLoading }) => {
           </div>
           <div style={underline}></div>
         </div>
-
         {/* show teachers in that time */}
         {showDetail && (
           <div className="absolute teachers min-w-[80px] top-10 rounded-lg bg-[#f8f8f2] shadow-2xl ">
@@ -159,11 +176,128 @@ const Rectangle = ({ data, job, name, setLoading }) => {
             )}
             {/* students end herer */}
             <div className="flex items-center gap-2 m-1">
-              <button className="p-1 text-sm font-semibold bg-[#bd93f9] rounded-md">
+              <button
+                onClick={() =>
+                  setAdd((prev) => ({
+                    ...prev,
+                    teachers: { ...prev.teachers, show: true },
+                  }))
+                }
+                className="p-1 text-sm font-semibold bg-[#bd93f9] rounded-md"
+              >
                 add teacher
               </button>
-              <button className="p-1 text-sm font-semibold bg-[#bd93f9] rounded-md">
+              <button
+                onClick={() =>
+                  setAdd((prev) => ({
+                    ...prev,
+                    students: { ...prev.students, show: true },
+                  }))
+                }
+                className="p-1 text-sm font-semibold bg-[#bd93f9] rounded-md"
+              >
                 add student
+              </button>
+            </div>
+          </div>
+        )}
+        {add.students.show && (
+          <div className="fixed flex items-center justify-center z-50 top-0 left-0 bottom-0 h-[100vh] w-[100vw] bg-loading">
+            <div className="relative p-4 gap-10 h-72 flex-col bg-white rounded-2xl flex items-center justify-center">
+              <p className="max-w-[250px] text-[15px]">
+                you are adding a <span className="font-bold">Student</span> in{" "}
+                <span className="font-semibold">{data.day}</span> on{" "}
+                <span className="font-semibold">{data.time}</span>
+              </p>
+              <form
+                onSubmit={(event) =>
+                  addHandler(event, add.students.name, "students")
+                }
+                className="flex flex-col gap-10"
+              >
+                <div>
+                  <label
+                    htmlFor="add-teacher"
+                    className="block mb-2 text-start text-sm font-medium text-gray-900"
+                  >
+                    Name:
+                  </label>
+                  <input
+                    required
+                    minLength={3}
+                    type="text"
+                    onChange={(e) =>
+                      setAdd((prev) => ({
+                        ...prev,
+                        students: { ...prev.students, name: e.target.value },
+                      }))
+                    }
+                    id="add-teacher"
+                    className="border border-gray-500 rounded-md focus:outline-blue-600"
+                  />
+                </div>
+
+                <button className="px-14 py-1 rounded-full text-white/80 font-semibold bg-[#6272a4] ">
+                  ADD
+                </button>
+              </form>
+
+              <button
+                onClick={() => setAdd((prev) => ({ ...prev, students: false }))}
+                className="absolute bg-red-200 top-0 right-0 rounded-xl pb-1 px-2 font-bold text-2xl text-[#ff5555]"
+              >
+                &#9587;
+              </button>
+            </div>
+          </div>
+        )}
+        {/* form to add another teacher */}
+        {add.teachers.show && (
+          <div className="fixed flex items-center justify-center z-50 top-0 left-0 bottom-0 h-[100vh] w-[100vw] bg-loading">
+            <div className="relative p-4 gap-10 h-72 flex-col bg-white rounded-2xl flex items-center justify-center">
+              <p className="max-w-[250px] text-[15px]">
+                you are adding a <span className="font-bold">Teacher</span> in{" "}
+                <span className="font-semibold">{data.day}</span> on{" "}
+                <span className="font-semibold">{data.time}</span>
+              </p>
+              <form
+                onSubmit={(event) =>
+                  addHandler(event, add.teachers.name, "teachers")
+                }
+                className="flex flex-col gap-10"
+              >
+                <div>
+                  <label
+                    htmlFor="add-teacher"
+                    className="block mb-2 text-start text-sm font-medium text-gray-900"
+                  >
+                    Name:
+                  </label>
+                  <input
+                    required
+                    minLength={3}
+                    onChange={(e) =>
+                      setAdd((prev) => ({
+                        ...prev,
+                        teachers: { ...prev.teachers, name: e.target.value },
+                      }))
+                    }
+                    type="text"
+                    id="add-teacher"
+                    className="border border-gray-500 rounded-md focus:outline-blue-600"
+                  />
+                </div>
+
+                <button className="px-14 py-1 rounded-full text-white/80 font-semibold bg-[#6272a4] ">
+                  ADD
+                </button>
+              </form>
+
+              <button
+                onClick={() => setAdd((prev) => ({ ...prev, teachers: false }))}
+                className="absolute bg-red-200 top-0 right-0 rounded-xl pb-1 px-2 font-bold text-2xl text-[#ff5555]"
+              >
+                &#9587;
               </button>
             </div>
           </div>
