@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useUpdateDataMutation } from "../../../app/apiSlice";
 import { toast } from "react-toastify";
+import Loading from "../../LoadingScreen/LoadingScreen";
 
 const Rectangle = ({ data, job, name, setLoading }) => {
   const [showDetail, setShowDetail] = useState(false);
@@ -110,7 +111,7 @@ const Rectangle = ({ data, job, name, setLoading }) => {
                 <div className="h-[1px] bg-black divider text-center" />
                 <div className="grid grid-cols-2 max-w-[133px] gap-2 py-1 mx-auto text-white/90">
                   {data.teachers?.map((t) => (
-                    <div key={t} className="w-full">
+                    <div key={t} className="mx-auto">
                       <div className="bg-[#44475a] w-9 rounded-sm relative cube">
                         {t}
                         <button
@@ -144,7 +145,7 @@ const Rectangle = ({ data, job, name, setLoading }) => {
                   {students.map((s) => (
                     <div
                       key={s}
-                      className="bg-[#44475a] w-9 rounded-sm relative cube"
+                      className="bg-[#44475a] w-9 rounded-sm relative cube mx-auto"
                     >
                       {s.toString().slice(0, 3)}
                       <button
@@ -157,6 +158,14 @@ const Rectangle = ({ data, job, name, setLoading }) => {
               </div>
             )}
             {/* students end herer */}
+            <div className="flex items-center gap-2 m-1">
+              <button className="p-1 text-sm font-semibold bg-[#bd93f9] rounded-md">
+                add teacher
+              </button>
+              <button className="p-1 text-sm font-semibold bg-[#bd93f9] rounded-md">
+                add student
+              </button>
+            </div>
           </div>
         )}
       </div>
