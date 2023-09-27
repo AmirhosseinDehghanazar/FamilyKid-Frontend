@@ -5,7 +5,7 @@ import S_hero from "./components/S_hero";
 import Days from "./components/Days";
 import Time from "./components/Time";
 import "./date.css";
-import Rectangle from "./components/Rectangle";
+import Rectangle from "./components/rectangle/Rectangle";
 import { useGetDataQuery } from "../../app/apiSlice";
 import Loading from "./../LoadingScreen/LoadingScreen";
 
