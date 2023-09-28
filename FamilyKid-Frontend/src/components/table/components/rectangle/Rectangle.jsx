@@ -83,7 +83,11 @@ const Rectangle = ({ data, job, name, setLoading }) => {
 
   return (
     <>
-      <div className={job === "supervisor" && "relative rectangle"}>
+      <div
+        className={`${
+          job === "supervisor" && "relative rectangle"
+        } min-h-[63px]`}
+      >
         <div
           onClick={recHandler}
           className="flex flex-col rectangle-parent cursor-pointer overflow-hidden rounded-2xl"

@@ -39,12 +39,12 @@ const Date = ({ name, job }) => {
         {/* making timetableText + times aprt from days and Rectangle */}
         <div className="flex ">
           {/* timetable text + all times in flex-col */}
-          <div className="inline-flex flex-col gap-4 items-center">
+          <div className="inline-flex flex-col gap-2 items-center">
             <p className="timetable-text">timetable</p>
             <Time />
           </div>
           {/* table */}
-          <div className="grid grid-cols-7 z-10 auto-rows-max w-full gap-2 text-center">
+          <div className="grid  grid-cols-7 z-10 auto-rows-max w-full gap-2 text-center">
             <Days />
             {data?.map((data) => (
               <Rectangle
