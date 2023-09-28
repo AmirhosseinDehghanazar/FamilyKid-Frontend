@@ -23,7 +23,10 @@ const Date = ({ name, job }) => {
       <div className="mb-10">
         {/* header */}
         <div className="flex items-center justify-between mb-8">
-          <img src={logo} />
+          <a href="/">
+            <img src={logo} />
+          </a>
+
           <div className="flex justify-center items-center gap-4">
             <p className="good-morning">Good Morning, {name}</p>
             <div className="bg-smile" />
