@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const TimeDetail = ({ data, setAdd, updateData, students, setStudents }) => {
   // handleSearch for students
   const searchHandler = (e) => {
@@ -9,6 +11,7 @@ const TimeDetail = ({ data, setAdd, updateData, students, setStudents }) => {
       ...data,
       teachers: data.teachers.filter((t) => t !== teacherName),
     });
+    toast(`Teacher ${teacherName} has been removed`);
   };
   //function to remove a student works only for supervisor
   const removeStudent = (studentName) => {
@@ -16,6 +19,7 @@ const TimeDetail = ({ data, setAdd, updateData, students, setStudents }) => {
       ...data,
       students: data.students.filter((s) => s !== studentName),
     });
+    toast(`Student ${studentName} has been removed`);
     setStudents((prev) => [...prev.filter((s) => s !== studentName)]);
   };
 

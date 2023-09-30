@@ -27,638 +27,1126 @@
       "id": 1,
       "day": "9/21/2023",
       "time": "9:00_9:45",
-      "teachers": ["mr.x", "mr.w"],
-      "students": ["s1", "s3", "s4", "s5", "s7"]
+      "teachers": [
+        "mr.x",
+        "tet"
+      ],
+      "students": [
+        "s1",
+        "s3",
+        "s4",
+        "s5"
+      ]
     },
     {
       "id": 2,
       "day": "9/22/2023",
       "time": "9:00_9:45",
-      "teachers": ["mr.x", "mr.z"],
-      "students": ["s5"]
+      "teachers": [
+        "mr.x",
+        "mr.z"
+      ],
+      "students": [
+        "s5"
+      ]
     },
     {
       "id": 3,
       "day": "9/23/2023",
       "time": "9:00_9:45",
-      "teachers": ["mr.x"],
+      "teachers": [
+        "mr.x"
+      ],
       "students": []
     },
     {
       "id": 4,
       "day": "9/24/2023",
       "time": "9:00_9:45",
-      "teachers": ["mr.x"],
-      "students": ["s4"]
+      "teachers": [
+        "mr.x"
+      ],
+      "students": [
+        "s4"
+      ]
     },
     {
       "id": 5,
       "day": "9/25/2023",
       "time": "9:00_9:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 6,
       "day": "9/26/2023",
       "time": "9:00_9:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4"]
+      "students": [
+        "s2",
+        "s3",
+        "s4"
+      ]
     },
     {
       "id": 7,
       "day": "9/27/2023",
       "time": "9:00_9:45",
       "teachers": [],
-      "students": ["s1", "s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 8,
       "day": "9/21/2023",
       "time": "10:00_10:45",
-      "teachers": ["mr.x", "mr.w", "eww", "eee"],
-      "students": ["s1", "s3", "s4", "s5", "s7"]
+      "teachers": [
+        "mr.x",
+        "mr.w",
+        "eww",
+        "eee"
+      ],
+      "students": [
+        "s1",
+        "s3",
+        "s4",
+        "s5",
+        "s7"
+      ]
     },
     {
       "id": 9,
       "day": "9/22/2023",
       "time": "10:00_10:45",
-      "teachers": ["mr.x", "mr.z"],
-      "students": ["s5"]
+      "teachers": [
+        "mr.x",
+        "mr.z"
+      ],
+      "students": [
+        "s5"
+      ]
     },
     {
       "id": 10,
       "day": "9/23/2023",
       "time": "10:00_10:45",
-      "teachers": ["mr.x"],
+      "teachers": [
+        "mr.x"
+      ],
       "students": []
     },
     {
       "id": 11,
       "day": "9/24/2023",
       "time": "10:00_10:45",
-      "teachers": ["mr.x"],
-      "students": ["s4"]
+      "teachers": [
+        "mr.x"
+      ],
+      "students": [
+        "s4"
+      ]
     },
     {
       "id": 12,
       "day": "9/25/2023",
       "time": "10:00_10:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 13,
       "day": "9/26/2023",
       "time": "10:00_10:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4"]
+      "students": [
+        "s2",
+        "s3",
+        "s4"
+      ]
     },
     {
       "id": 14,
       "day": "9/27/2023",
       "time": "10:00_10:45",
       "teachers": [],
-      "students": ["s1", "s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 15,
       "day": "9/21/2023",
       "time": "11:00_11:45",
       "teachers": [],
-      "students": ["s1", "s3", "s4", "s5", "s7"]
+      "students": [
+        "s1",
+        "s3",
+        "s4",
+        "s5",
+        "s7"
+      ]
     },
     {
       "id": 16,
       "day": "9/22/2023",
       "time": "11:00_11:45",
-      "teachers": ["mr.x", "mr.z"],
-      "students": ["s5"]
+      "teachers": [
+        "mr.x",
+        "mr.z"
+      ],
+      "students": [
+        "s5"
+      ]
     },
     {
       "id": 17,
       "day": "9/23/2023",
       "time": "11:00_11:45",
-      "teachers": ["mr.x"],
+      "teachers": [
+        "mr.x"
+      ],
       "students": []
     },
     {
       "id": 18,
       "day": "9/24/2023",
       "time": "11:00_11:45",
-      "teachers": ["mr.x"],
-      "students": ["s4"]
+      "teachers": [
+        "mr.x"
+      ],
+      "students": [
+        "s4"
+      ]
     },
     {
       "id": 19,
       "day": "9/25/2023",
       "time": "11:00_11:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 20,
       "day": "9/26/2023",
       "time": "11:00_11:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4"]
+      "students": [
+        "s2",
+        "s3",
+        "s4"
+      ]
     },
     {
       "id": 21,
       "day": "9/27/2023",
       "time": "11:00_11:45",
       "teachers": [],
-      "students": ["s1", "s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 22,
       "day": "9/21/2023",
       "time": "12:00_12:45",
-      "teachers": ["mr.x", "mr.w", "eww", "eee"],
-      "students": ["s1", "s3", "s4", "s5", "s7"]
+      "teachers": [
+        "mr.x",
+        "mr.w",
+        "eww",
+        "eee"
+      ],
+      "students": [
+        "s1",
+        "s3",
+        "s4",
+        "s5",
+        "s7"
+      ]
     },
     {
       "id": 23,
       "day": "9/22/2023",
       "time": "12:00_12:45",
-      "teachers": ["mr.x", "mr.z"],
-      "students": ["s5"]
+      "teachers": [
+        "mr.x",
+        "mr.z"
+      ],
+      "students": [
+        "s5"
+      ]
     },
     {
       "id": 24,
       "day": "9/23/2023",
       "time": "12:00_12:45",
-      "teachers": ["mr.x"],
+      "teachers": [
+        "mr.x"
+      ],
       "students": []
     },
     {
       "id": 25,
       "day": "9/24/2023",
       "time": "12:00_12:45",
-      "teachers": ["mr.x"],
-      "students": ["s4"]
+      "teachers": [
+        "mr.x"
+      ],
+      "students": [
+        "s4"
+      ]
     },
     {
       "id": 26,
       "day": "9/25/2023",
       "time": "12:00_12:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 27,
       "day": "9/26/2023",
       "time": "12:00_12:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4"]
+      "students": [
+        "s2",
+        "s3",
+        "s4"
+      ]
     },
     {
       "id": 28,
       "day": "9/27/2023",
       "time": "12:00_12:45",
       "teachers": [],
-      "students": ["s1", "s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 29,
       "day": "9/21/2023",
       "time": "13:00_13:45",
-      "teachers": ["mr.x", "mr.w", "eww", "eee"],
-      "students": ["s1", "s3", "s4", "s5", "s7"]
+      "teachers": [
+        "mr.x",
+        "mr.w",
+        "eww",
+        "eee"
+      ],
+      "students": [
+        "s1",
+        "s3",
+        "s4",
+        "s5",
+        "s7"
+      ]
     },
     {
       "id": 30,
       "day": "9/22/2023",
       "time": "13:00_13:45",
-      "teachers": ["mr.x", "mr.z"],
-      "students": ["s5"]
+      "teachers": [
+        "mr.x",
+        "mr.z"
+      ],
+      "students": [
+        "s5"
+      ]
     },
     {
       "id": 31,
       "day": "9/23/2023",
       "time": "13:00_13:45",
-      "teachers": ["mr.x"],
+      "teachers": [
+        "mr.x"
+      ],
       "students": []
     },
     {
       "id": 32,
       "day": "9/24/2023",
       "time": "13:00_13:45",
-      "teachers": ["mr.x"],
-      "students": ["s4"]
+      "teachers": [
+        "mr.x"
+      ],
+      "students": [
+        "s4"
+      ]
     },
     {
       "id": 33,
       "day": "9/25/2023",
       "time": "13:00_13:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 34,
       "day": "9/26/2023",
       "time": "13:00_13:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4"]
+      "students": [
+        "s2",
+        "s3",
+        "s4"
+      ]
     },
     {
       "id": 35,
       "day": "9/27/2023",
       "time": "13:00_13:45",
       "teachers": [],
-      "students": ["s1", "s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 36,
       "day": "9/21/2023",
       "time": "14:00_14:45",
-      "teachers": ["eee"],
-      "students": ["s1", "s3", "s4", "s5", "s7"]
+      "teachers": [
+        "eee"
+      ],
+      "students": [
+        "s1",
+        "s3",
+        "s4",
+        "s5",
+        "s7"
+      ]
     },
     {
       "id": 37,
       "day": "9/22/2023",
       "time": "14:00_14:45",
-      "teachers": ["mr.x", "mr.z"],
-      "students": ["s5"]
+      "teachers": [
+        "mr.x",
+        "mr.z"
+      ],
+      "students": [
+        "s5"
+      ]
     },
     {
       "id": 38,
       "day": "9/23/2023",
       "time": "14:00_14:45",
-      "teachers": ["mr.x"],
+      "teachers": [
+        "mr.x"
+      ],
       "students": []
     },
     {
       "id": 39,
       "day": "9/24/2023",
       "time": "14:00_14:45",
-      "teachers": ["mr.x"],
-      "students": ["s4"]
+      "teachers": [
+        "mr.x"
+      ],
+      "students": [
+        "s4"
+      ]
     },
     {
       "id": 40,
       "day": "9/25/2023",
       "time": "14:00_14:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 41,
       "day": "9/26/2023",
       "time": "14:00_14:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4"]
+      "students": [
+        "s2",
+        "s3",
+        "s4"
+      ]
     },
     {
       "id": 42,
       "day": "9/27/2023",
       "time": "14:00_14:45",
       "teachers": [],
-      "students": ["s1", "s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 43,
       "day": "9/21/2023",
       "time": "15:00_15:45",
-      "teachers": ["eww", "eee"],
-      "students": ["s1", "s3", "s4", "s5", "s7"]
+      "teachers": [
+        "eww",
+        "eee"
+      ],
+      "students": [
+        "s1",
+        "s3",
+        "s4",
+        "s5",
+        "s7"
+      ]
     },
     {
       "id": 44,
       "day": "9/22/2023",
       "time": "15:00_15:45",
-      "teachers": ["mr.x", "mr.z"],
-      "students": ["s5"]
+      "teachers": [
+        "mr.x",
+        "mr.z"
+      ],
+      "students": [
+        "s5"
+      ]
     },
     {
       "id": 45,
       "day": "9/23/2023",
       "time": "15:00_15:45",
-      "teachers": ["mr.x"],
+      "teachers": [
+        "mr.x"
+      ],
       "students": []
     },
     {
       "id": 46,
       "day": "9/24/2023",
       "time": "15:00_15:45",
-      "teachers": ["mr.x"],
-      "students": ["s4"]
+      "teachers": [
+        "mr.x"
+      ],
+      "students": [
+        "s4"
+      ]
     },
     {
       "id": 47,
       "day": "9/25/2023",
       "time": "15:00_15:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 48,
       "day": "9/26/2023",
       "time": "15:00_15:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4"]
+      "students": [
+        "s2",
+        "s3",
+        "s4"
+      ]
     },
     {
       "id": 49,
       "day": "9/27/2023",
       "time": "15:00_15:45",
       "teachers": [],
-      "students": ["s1", "s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 50,
       "day": "9/21/2023",
       "time": "16:00_16:45",
-      "teachers": ["mr.w"],
-      "students": ["s1", "s3", "s4", "s5", "s7"]
+      "teachers": [
+        "mr.w"
+      ],
+      "students": [
+        "s1",
+        "s3",
+        "s4",
+        "s5",
+        "s7"
+      ]
     },
     {
       "id": 51,
       "day": "9/22/2023",
       "time": "16:00_16:45",
-      "teachers": ["mr.x", "mr.z"],
-      "students": ["s5"]
+      "teachers": [
+        "mr.x",
+        "mr.z"
+      ],
+      "students": [
+        "s5"
+      ]
     },
     {
       "id": 52,
       "day": "9/23/2023",
       "time": "16:00_16:45",
-      "teachers": ["mr.x"],
+      "teachers": [
+        "mr.x"
+      ],
       "students": []
     },
     {
       "id": 53,
       "day": "9/24/2023",
       "time": "16:00_16:45",
-      "teachers": ["mr.x"],
-      "students": ["s4"]
+      "teachers": [
+        "mr.x"
+      ],
+      "students": [
+        "s4"
+      ]
     },
     {
       "id": 54,
       "day": "9/25/2023",
       "time": "16:00_16:45",
-      "teachers": ["t4"],
-      "students": ["s2", "s3", "s4", "s5", "s6"]
+      "teachers": [
+        "t4"
+      ],
+      "students": [
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 55,
       "day": "9/26/2023",
       "time": "16:00_16:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4"]
+      "students": [
+        "s2",
+        "s3",
+        "s4"
+      ]
     },
     {
       "id": 56,
       "day": "9/27/2023",
       "time": "16:00_16:45",
       "teachers": [],
-      "students": ["s1", "s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 57,
       "day": "9/21/2023",
       "time": "17:00_17:45",
       "teachers": [],
-      "students": ["s1", "s3", "s4", "s5", "s7"]
+      "students": [
+        "s1",
+        "s3",
+        "s4",
+        "s5",
+        "s7"
+      ]
     },
     {
       "id": 58,
       "day": "9/22/2023",
       "time": "17:00_17:45",
-      "teachers": ["mr.x", "mr.z"],
-      "students": ["s5"]
+      "teachers": [
+        "mr.x",
+        "mr.z"
+      ],
+      "students": [
+        "s5"
+      ]
     },
     {
       "id": 59,
       "day": "9/23/2023",
       "time": "17:00_17:45",
-      "teachers": ["mr.x"],
+      "teachers": [
+        "mr.x"
+      ],
       "students": []
     },
     {
       "id": 60,
       "day": "9/24/2023",
       "time": "17:00_17:45",
-      "teachers": ["mr.x"],
-      "students": ["s4"]
+      "teachers": [
+        "mr.x"
+      ],
+      "students": [
+        "s4"
+      ]
     },
     {
       "id": 61,
       "day": "9/25/2023",
       "time": "17:00_17:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 62,
       "day": "9/26/2023",
       "time": "17:00_17:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4", "s6"]
+      "students": [
+        "s2",
+        "s3",
+        "s4",
+        "s6"
+      ]
     },
     {
       "id": 63,
       "day": "9/27/2023",
       "time": "17:00_17:45",
       "teachers": [],
-      "students": ["s1", "s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 64,
       "day": "9/21/2023",
       "time": "18:00_18:45",
-      "teachers": ["mr.x", "mr.w", "eww", "eee"],
-      "students": ["s1", "s3", "s4", "s5", "s7"]
+      "teachers": [
+        "mr.x",
+        "mr.w",
+        "eww",
+        "eee"
+      ],
+      "students": [
+        "s1",
+        "s3",
+        "s4",
+        "s5",
+        "s7"
+      ]
     },
     {
       "id": 65,
       "day": "9/22/2023",
       "time": "18:00_18:45",
-      "teachers": ["mr.x", "mr.z"],
-      "students": ["s5"]
+      "teachers": [
+        "mr.x",
+        "mr.z"
+      ],
+      "students": [
+        "s5"
+      ]
     },
     {
       "id": 66,
       "day": "9/23/2023",
       "time": "18:00_18:45",
-      "teachers": ["mr.x"],
+      "teachers": [
+        "mr.x"
+      ],
       "students": []
     },
     {
       "id": 67,
       "day": "9/24/2023",
       "time": "18:00_18:45",
-      "teachers": ["mr.x"],
-      "students": ["s4"]
+      "teachers": [
+        "mr.x"
+      ],
+      "students": [
+        "s4"
+      ]
     },
     {
       "id": 68,
       "day": "9/25/2023",
       "time": "18:00_18:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 69,
       "day": "9/26/2023",
       "time": "18:00_18:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4"]
+      "students": [
+        "s2",
+        "s3",
+        "s4"
+      ]
     },
     {
       "id": 70,
       "day": "9/27/2023",
       "time": "18:00_18:45",
       "teachers": [],
-      "students": ["s1", "s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 71,
       "day": "9/21/2023",
       "time": "19:00_19:45",
-      "teachers": ["mr.x", "mr.w", "eww", "eee"],
-      "students": ["s1", "s3", "s4", "s5", "s7"]
+      "teachers": [
+        "mr.x",
+        "mr.w",
+        "eww",
+        "eee"
+      ],
+      "students": [
+        "s1",
+        "s3",
+        "s4",
+        "s5",
+        "s7"
+      ]
     },
     {
       "id": 72,
       "day": "9/22/2023",
       "time": "19:00_19:45",
-      "teachers": ["mr.x", "mr.z"],
-      "students": ["s5"]
+      "teachers": [
+        "mr.x",
+        "mr.z"
+      ],
+      "students": [
+        "s5"
+      ]
     },
     {
       "id": 73,
       "day": "9/23/2023",
       "time": "19:00_19:45",
-      "teachers": ["mr.x"],
+      "teachers": [
+        "mr.x"
+      ],
       "students": []
     },
     {
       "id": 74,
       "day": "9/24/2023",
       "time": "19:00_19:45",
-      "teachers": ["mr.x"],
-      "students": ["s4"]
+      "teachers": [
+        "mr.x"
+      ],
+      "students": [
+        "s4"
+      ]
     },
     {
       "id": 75,
       "day": "9/25/2023",
       "time": "19:00_19:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 76,
       "day": "9/26/2023",
       "time": "19:00_19:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4"]
+      "students": [
+        "s2",
+        "s3",
+        "s4"
+      ]
     },
     {
       "id": 77,
       "day": "9/27/2023",
       "time": "19:00_19:45",
       "teachers": [],
-      "students": ["s1", "s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 78,
       "day": "9/21/2023",
       "time": "20:00_20:45",
-      "teachers": ["mr.w", "eww", "eee"],
-      "students": ["s1", "s3", "s4", "s5", "s7"]
+      "teachers": [
+        "mr.w",
+        "eww",
+        "eee"
+      ],
+      "students": [
+        "s1",
+        "s3",
+        "s4",
+        "s5",
+        "s7"
+      ]
     },
     {
       "id": 79,
       "day": "9/22/2023",
       "time": "20:00_20:45",
-      "teachers": ["mr.x", "mr.z"],
-      "students": ["s5"]
+      "teachers": [
+        "mr.x",
+        "mr.z"
+      ],
+      "students": [
+        "s5"
+      ]
     },
     {
       "id": 80,
       "day": "9/23/2023",
       "time": "20:00_20:45",
-      "teachers": ["mr.x"],
+      "teachers": [
+        "mr.x"
+      ],
       "students": []
     },
     {
       "id": 81,
       "day": "9/24/2023",
       "time": "20:00_20:45",
-      "teachers": ["mr.x"],
-      "students": ["s4"]
+      "teachers": [
+        "mr.x"
+      ],
+      "students": [
+        "s4"
+      ]
     },
     {
       "id": 82,
       "day": "9/25/2023",
       "time": "20:00_20:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 83,
       "day": "9/26/2023",
       "time": "20:00_20:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4"]
+      "students": [
+        "s2",
+        "s3",
+        "s4"
+      ]
     },
     {
       "id": 84,
       "day": "9/27/2023",
       "time": "20:00_20:45",
       "teachers": [],
-      "students": ["s1", "s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 85,
       "day": "9/21/2023",
       "time": "21:00_21:45",
-      "teachers": ["mr.x", "mr.w", "eww", "eee"],
-      "students": ["s1", "s3", "s4", "s5", "s7"]
+      "teachers": [
+        "mr.x",
+        "mr.w",
+        "eww",
+        "eee"
+      ],
+      "students": [
+        "s1",
+        "s3",
+        "s4",
+        "s5",
+        "s7"
+      ]
     },
     {
       "id": 86,
       "day": "9/22/2023",
       "time": "21:00_21:45",
-      "teachers": ["mr.x", "mr.z"],
-      "students": ["s5"]
+      "teachers": [
+        "mr.x",
+        "mr.z"
+      ],
+      "students": [
+        "s5"
+      ]
     },
     {
       "id": 87,
       "day": "9/23/2023",
       "time": "21:00_21:45",
-      "teachers": ["mr.x"],
+      "teachers": [
+        "mr.x"
+      ],
       "students": []
     },
     {
       "id": 88,
       "day": "9/24/2023",
       "time": "21:00_21:45",
-      "teachers": ["mr.x"],
-      "students": ["s4"]
+      "teachers": [
+        "mr.x"
+      ],
+      "students": [
+        "s4"
+      ]
     },
     {
       "id": 89,
       "day": "9/25/2023",
       "time": "21:00_21:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     },
     {
       "id": 90,
       "day": "9/26/2023",
       "time": "21:00_21:45",
       "teachers": [],
-      "students": ["s2", "s3", "s4"]
+      "students": [
+        "s2",
+        "s3",
+        "s4"
+      ]
     },
     {
       "id": 91,
       "day": "9/27/2023",
       "time": "21:00_21:45",
       "teachers": [],
-      "students": ["s1", "s2", "s3", "s4", "s5", "s6"]
+      "students": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
     }
   ]
 }
