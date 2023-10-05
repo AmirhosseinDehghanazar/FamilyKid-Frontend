@@ -1,5 +1,6 @@
 import { object, string, ref } from "yup";
 
+// setting a schema for register page passwords match checks here
 export const registerSchema = object({
   email: string().email().max(254).required("email is required!"),
   phone: string().max(11).required("phone number required!"),

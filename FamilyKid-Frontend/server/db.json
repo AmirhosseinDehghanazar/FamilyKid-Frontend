@@ -27,15 +27,10 @@
       "id": 1,
       "day": "9/21/2023",
       "time": "9:00_9:45",
-      "teachers": [
-        "mr.x",
-        "tet"
-      ],
+      "teachers": [],
       "students": [
         "s1",
-        "s3",
-        "s4",
-        "s5"
+        "s3"
       ]
     },
     {
@@ -55,7 +50,8 @@
       "day": "9/23/2023",
       "time": "9:00_9:45",
       "teachers": [
-        "mr.x"
+        "mr.x",
+        "tes"
       ],
       "students": []
     },
@@ -87,7 +83,9 @@
       "id": 6,
       "day": "9/26/2023",
       "time": "9:00_9:45",
-      "teachers": [],
+      "teachers": [
+        "mr.x"
+      ],
       "students": [
         "s2",
         "s3",
@@ -116,14 +114,14 @@
         "mr.x",
         "mr.w",
         "eww",
-        "eee"
+        "eee",
+        "t4"
       ],
       "students": [
         "s1",
-        "s3",
         "s4",
         "s5",
-        "s7"
+        "s6"
       ]
     },
     {

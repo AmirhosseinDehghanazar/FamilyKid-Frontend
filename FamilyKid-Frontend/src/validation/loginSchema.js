@@ -1,5 +1,6 @@
 import { object, string, ref } from "yup";
 
+// setting a schema for login page
 export const loginSchema = object({
   national_code: string().max(10).required("please enter a national code"),
 
